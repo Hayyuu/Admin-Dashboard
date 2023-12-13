@@ -1,0 +1,278 @@
+:root{
+    --color-main:rgb(192, 189, 189);
+
+}
+body{
+    background-color: black;
+    box-sizing: border-box;
+}
+.container{
+   width:100%;
+   margin: 90px 0px;
+   background-color: var(--color-main);
+   height: 80vh;
+   display: grid;
+   grid-template-rows: 1fr 2fr 1fr;
+   grid-template-columns: 1fr 3fr;
+   
+}
+.main-content{
+    background-color: var(--color-main);
+}
+/* sidebar style starts*/
+#sidebar{
+    background:rgb(126, 126, 218);
+}
+.sidebar{
+    grid-row:1/span 3;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr;
+    gap: 10px;
+    color:white;
+
+}
+#dashboard_icon{
+    width: 50px;
+    height: 50px;
+}
+.icon_container{
+    width:30px;
+    height:30px;
+    justify-self: end;
+}
+.sidebar > div > div{
+    display: grid;
+    grid-template: 1fr/1fr 3fr;
+    align-items: center;
+    gap:10px;
+}
+
+
+/* sidebar style ends */
+.header{
+    grid-row:1/span 1;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr/1fr;
+    background-color: azure;
+    box-shadow: 0px 5px 5px grey;
+   
+}
+.header_top{
+    display: grid;
+    grid-template:1fr/ 50px 1fr 1fr;
+    padding-top: 10px;
+    align-items: center;
+    gap:10px;
+} 
+
+.header_top .ring{
+    width:20px;
+    height:20px;
+}
+.header_left{
+ display: grid;
+ grid-template:1fr/ 50px 40px 1fr;
+ align-items: center;
+ gap:20px;
+}
+.logo{
+    width:40px;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.logo i{
+    font-size: 1.5rem;
+    color:var(--color-main);
+    
+}
+input{
+    border:1px solid var(--color-main);
+    border-radius: 10px;
+    background-color: var(--color-main);
+    height:20px;
+    width: 100%;
+
+}
+input:focus{
+    background-color: rgb(127, 241, 241);
+    outline: none;
+    border: none;
+    color: white;
+    box-shadow: 2px 2px 5px var(--color-main);
+}
+.name_container h4::after,.trend .name_container span::after{
+   content: "Hayat Ahimed";
+}
+.header_bottom{
+    display: grid;
+    grid-template:1fr/1fr 1fr;
+    gap :10px;
+    align-items: center;
+}
+.header_bottom_left{
+    display: grid;
+    grid-template: 1fr/100px 1fr;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+.big_logo{
+    width:60px;
+    height: 60px;
+}
+.name{
+    justify-self: start;
+}
+
+.buttons{
+    align-self: end;
+    display: grid;
+    grid:1fr/1fr 1fr 1fr;
+    gap:15px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+}
+button{
+    background-color:rgb(126, 126, 218);
+    border: none;
+    padding:8px 0 8px 0;
+    border-radius: 10px;
+    color: white;
+}
+button:hover{
+    background-color: rgb(243, 243, 198);
+    color: black;
+}
+.main-content{
+    grid-row:2/span 2;
+    margin: 15px 0 0 20px;
+    display:grid;
+    grid-template:1fr/ 2.8fr 1.2fr;
+    gap:50px;
+    margin-bottom: 5px;
+}
+.main_left{
+    display: grid;
+    grid-template: 30px 1fr/1fr;
+    column-gap:40px; 
+    row-gap: 10px;
+    margin-left: 20px;
+}
+.cards{
+    display: grid;
+    grid-template: 1fr 1fr 1fr/1fr; 
+    gap:15px;  
+    
+}
+.cards > div{
+    display: grid;
+    grid-template: 1fr/1fr 1fr;
+    gap: 15px;;
+}
+.card span{
+    font-size: 0.9rem;
+}
+.card{
+    background-color: white;
+    padding: 10px;
+    display:grid;
+    grid-template: 30px 80px 30px/1fr;
+    border-left: 15px solid yellow;
+    border-radius: 10px;
+}
+.card .card_icon_container{
+    display: grid;
+    grid-template: 1fr/repeat(3,40px);
+    justify-content: end;
+    justify-items: end;
+}
+.main_right{
+    display: grid;
+    grid-template:300px 200px/1fr;
+    
+}
+.main_right p{
+    font-size: 0.7rem;
+}
+.main_right span{
+    font-size: 0.7rem;
+}
+.main_right_top{
+    display: grid;
+    grid-template: 20px 1fr/1fr;
+    gap:20px;
+}
+.main_right_top .ann{
+    background-color: white;
+    margin:  20px 100px 20px 0;
+    padding: 0 30px 0 30px;
+    border-radius: 5px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr/1fr;
+}
+.main_right_top .ann .top, .middle{
+    border-bottom: 1px solid var(--color-main);
+}
+.main_right_bottom{
+    display: grid;
+    grid-template: 30px 1fr/1fr;
+    gap:20px;
+   
+}
+.trend{
+    background-color: white;
+    display: grid;
+    grid-template:repeat(4,1fr)/1fr;
+    border-radius: 5px;
+    margin: 0 100px 30px 0;
+    padding: 10px 100px 0 0;
+    gap:10px;
+}
+.trend > div{
+    display: grid;
+    grid-template: 1fr/1fr 1fr;
+    justify-items: center;
+    justify-content: start;
+    align-items: center;
+    gap:10px;
+   
+
+}
+.trend .logo{
+    justify-self: end;
+   
+}
+#red{
+    background-color: red;
+}
+
+#purple{
+    background-color: purple;
+}
+#black{
+    background-color: black;
+}
+#yellow + div .name_container span::after{
+    content: "@iamyellow";
+}
+#red + div .name_container span::after{
+    content: "@iamred";
+}
+#purple + div .name_container span::after{
+    content: "@iampurple";
+}
+#black + div .name_container span::after{
+    content: "@iamblack";
+}
+.trend .name{
+   justify-self: start;
+}
